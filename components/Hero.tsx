@@ -27,7 +27,7 @@ export default function Hero({ movie }: HeroProps) {
 
             {/* Gradient Overlay for Text Readability */}
             <div className="absolute inset-0 bg-gradient-to-r from-black via-black/50 to-transparent" />
-            <div className="absolute bottom-0 w-full h-3/4 md:h-40 bg-gradient-to-t from-[#141414] via-[#141414]/80 to-transparent" />
+            <div className="absolute bottom-0 w-full h-[55%] md:h-40 bg-gradient-to-t from-[#141414] to-transparent" />
 
             <div className="absolute top-[15%] md:top-[25%] left-4 md:left-12 lg:left-16 w-full md:w-[45%] lg:w-[40%] space-y-4 md:space-y-6 z-30 pr-4 md:pr-0">
                 {/* Title (Always Text) */}
