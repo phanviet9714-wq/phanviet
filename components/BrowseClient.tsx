@@ -29,7 +29,7 @@ export default function BrowseClient({ categories }: BrowseClientProps) {
         {/* Pass featured movie data to Hero */}
         <Hero movie={featuredMovie} />
 
-        <div className="pl-4 md:pl-16 -mt-10 md:-mt-32 relative z-20 space-y-8 lg:space-y-16">
+        <div className="relative z-20 -mt-10 md:-mt-32 space-y-8 lg:space-y-16">
           {rows.map((category) => (
             <Row
               key={category.title}

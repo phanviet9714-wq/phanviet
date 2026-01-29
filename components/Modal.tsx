@@ -51,19 +51,19 @@ export default function Modal({ movie, onClose }: ModalProps) {
                     </div>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-[2fr_1fr] gap-x-8 gap-y-4 px-10 py-8">
-                    <div className="space-y-4 text-white">
+                <div className="grid grid-cols-1 md:grid-cols-[2fr_1fr] gap-x-8 gap-y-4 px-4 py-4 md:px-10 md:py-8">
+                    <div className="space-y-4 text-white order-2 md:order-1">
                         <div className="flex items-center space-x-2 text-sm">
                             <span className="font-semibold text-green-460 text-green-500">{movie.match} Match</span>
                             <span className="border border-gray-500 px-1 text-gray-400">HD</span>
                         </div>
 
-                        <p className="text-lg leading-relaxed">
+                        <p className="text-sm md:text-lg leading-relaxed text-gray-300">
                             {movie.description}
                         </p>
                     </div>
 
-                    <div className="space-y-4 text-sm text-gray-400">
+                    <div className="space-y-2 md:space-y-4 text-xs md:text-sm text-gray-400 order-1 md:order-2">
                         <div>
                             <span className="text-gray-500">Genre:</span> {movie.genre}, Social Media, Science
                         </div>
