@@ -72,7 +72,6 @@ export default function Navbar() {
             <div className="flex items-center space-x-4 text-white">
                 <Search className="w-5 h-5 cursor-pointer hover:text-gray-300 transition" />
                 <Bell className="w-5 h-5 cursor-pointer hover:text-gray-300 transition" />
-                <div className="w-8 h-8 rounded bg-blue-600 cursor-pointer"></div> {/* Profile Placeholder */}
             </div>
         </nav>
     );
