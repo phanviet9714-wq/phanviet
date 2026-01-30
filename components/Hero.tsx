@@ -20,7 +20,7 @@ export default function Hero({ movie }: HeroProps) {
                     src={movie.thumbnailUrl} // Ideally should be a wider "backdrop" image
                     alt={movie.title}
                     fill
-                    className="object-cover object-top opacity-60"
+                    className="object-cover object-top opacity-85"
                     priority
                 />
             </div>
