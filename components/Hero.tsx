@@ -6,9 +6,11 @@ import { Movie } from "@/lib/data";
 
 interface HeroProps {
     movie: Movie | null;
+    accentColor?: string;
+    greeting?: string;
 }
 
-export default function Hero({ movie }: HeroProps) {
+export default function Hero({ movie, accentColor = "bg-netflix-red", greeting }: HeroProps) {
     // If no movie data (e.g. CSV empty), show a skeleton or nothing
     if (!movie) return <div className="h-[70vh] w-full bg-zinc-900 animate-pulse"></div>;
 
@@ -30,6 +32,12 @@ export default function Hero({ movie }: HeroProps) {
             <div className="absolute bottom-0 w-full h-[55%] md:h-40 bg-gradient-to-t from-[#141414] to-transparent" />
 
             <div className="absolute top-[15%] md:top-[25%] left-4 md:left-12 lg:left-16 w-full md:w-[45%] lg:w-[40%] space-y-4 md:space-y-6 z-30 pr-4 md:pr-0">
+                {/* Greeting */}
+                {greeting && (
+                    <div className="text-white/80 font-semibold mb-6 animate-fade-in tracking-wider">
+                        {greeting}
+                    </div>
+                )}
                 {/* Title (Always Text) */}
                 <h1 className="text-4xl md:text-6xl lg:text-8xl font-normal text-white drop-shadow-lg font-bebas tracking-wide uppercase leading-[0.9] text-shadow-lg transition-all duration-300">
                     {movie.title}
@@ -55,7 +63,7 @@ export default function Hero({ movie }: HeroProps) {
                 <div className="flex items-center space-x-3 pt-2">
                     <button
                         onClick={() => window.open("https://www.facebook.com/cuoi.thu.5", "_blank")}
-                        className="bg-netflix-red text-white px-4 py-2 md:px-8 md:py-3 rounded md:rounded-md font-bold flex items-center hover:bg-opacity-80 transition transform hover:scale-105 text-sm md:text-base"
+                        className={`${accentColor} text-white px-4 py-2 md:px-8 md:py-3 rounded md:rounded-md font-bold flex items-center hover:bg-opacity-80 transition transform hover:scale-105 text-sm md:text-base`}
                     >
                         <Play className="w-4 h-4 md:w-5 md:h-5 mr-2 md:mr-3 fill-white" />
                         Liên hệ
